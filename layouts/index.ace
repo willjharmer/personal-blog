@@ -1,0 +1,66 @@
+= doctype html
+html lang=en
+  head
+    meta charset=utf-8
+    meta name=viewport content="width=device-width, initial-scale=1"
+    meta name=author content="{{ .Site.Author.fullname }}"
+    meta name=description content="{{ .Site.Params.headdescription }}"
+    title {{.Site.Title}}
+
+    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css"
+    = conditionalComment hidden lte IE 8
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+
+
+    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css"
+
+    = conditionalComment hidden lte IE 8
+
+      <link rel="stylesheet" href="css/blog-old-ie.css">
+
+    link rel="stylesheet" href="css/blog.css"
+
+  body
+    #layout.pure-g
+      .sidebar.pure-u-1.pure-u-md-1-4
+        .header
+          h1.brand-title {{ .Site.Params.blogtitle }}
+          h2.brand-tagline {{ .Site.Params.blogdescription }}
+          nav.nav
+            ul.pure-menu-list
+              li.pure-menu-item
+                a.pure-menu-link href="#"  Pure
+              li.pure-menu-item
+                a.pure-menu-link href="#"  About
+              li.pure-menu-item
+                a.pure-menu-link href="#" Tag1
+              li.pure-menu-item
+                a.pure-menu-link href="#" Tag2
+      .content.pure-u-1.pure-u-md-3-4
+        div
+          / A wrapper for all the blog posts
+          .posts
+            h1.content-subhead Pinned Post
+            / A single blog post
+            section.post
+              header.post-header
+                h2.post-title Introducing Pure
+                p.post-meta
+                  | By
+                  a.post-author href="#"  Tilo Mitra
+                  |  under 
+                  a.post-category.post-category-design href="#"  CSS
+                  a.post-category.post-category-pure href="#"  Pure
+              .post-description
+                p
+                  {{ partial "dumpdot" .Site }}
+          .footer
+            .pure-menu.pure-menu-horizontal
+              ul
+                li.pure-menu-item
+                  a.pure-menu-link href="#"  About
+                li.pure-menu-item
+                  a.pure-menu-link href="{{ .Site.Params.twitter }}"  Twitter
+                li.pure-menu-item
+                  a.pure-menu-link href="{{ .Site.Params.github }}"  GitHub 

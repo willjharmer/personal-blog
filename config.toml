@@ -1,0 +1,15 @@
+baseurl = "http://replace-this-with-your-hugo-site.com/"
+languageCode = "en-us"
+title = "William Harmer"
+
+[author]
+  fullname = "William Harmer"
+  fname = "William"
+  lname = "Harmer"
+
+[params]
+  headdescription="My personal blog about technical projects, software development and data science"
+  blogtitle="William Harmer"
+  blogdescription="Technical projects, software development and data science"
+  twitter="http://twitter.com/harmer_will"
+  github="http://github.com/willjharmer"
