@@ -6,7 +6,6 @@ html lang=en
     meta name=author content="{{ .Site.Author.fullname }}"
     meta name=description content="{{ .Site.Params.headdescription }}"
     title {{.Site.Title}}
-
     link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css"
     = conditionalComment hidden lte IE 8
 
@@ -19,6 +18,7 @@ html lang=en
 
       <link rel="stylesheet" href="css/blog-old-ie.css">
 
+    link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel=stylesheet type=text/css
     link rel="stylesheet" href="css/blog.css"
 
   body
